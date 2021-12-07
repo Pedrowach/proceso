@@ -1,0 +1,27 @@
+<a href="/">Back</a>
+<h2>Users</h2>
+<table>
+    <thead>
+        <tr>
+          <th>Name</th>
+          <th>User Name</th>
+          <th>Password</th>
+          <th>Email</th>
+          <th>Admin</th> 
+          <th></th> 
+        </tr>
+    </thead>
+    <tbody>
+        <% users.forEach((user) => { %>
+            <tr>
+               <td><%= user.name %></td>
+               <td><%= user.username %></td> 
+               <td><%= user.password %></td> 
+               <td><%= user.email %></td> 
+               <td><%= user.admin %></td> 
+               <td><a href="<%= showUsersPath(user.id) %>">View more</a></td> 
+            </tr>
+       <% }) %>
+    </tbody>
+</table>
+<a href="<%= newUsersPath %>">New user</a>

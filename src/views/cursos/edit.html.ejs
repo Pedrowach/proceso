@@ -1,0 +1,22 @@
+<a href="<%= showCursosPath(curso.id) %>">Back</a>
+<h2>Modifying curso: <%= curso.name %><h2>
+<form action="<%= submitCursosPath(curso.id) %>" method="POST">
+    <input type="hidden" name = "_method" value = "PUT"></input>
+    <div>
+        <label for="nombrecurso">New Nombre curso</label>
+        <input type="text" id="nombrecurso" name="nombrecurso">
+    </div>
+    <div>
+        <label for="sigla"> New curso Name</label>
+        <input type="text" id="sigla" name="sigla">
+    </div>
+    <div>
+        <label for="promediomin">New promedio minimo</label>
+        <input type="number" id="promediomin" name="promediomin">
+    </div>
+    <div>
+        <label for="promediometa">New Promedio meta</label>
+        <input type="number" id="promediometa" name="promediometa">
+    </div>
+    <input type="submit" value="Update Curso">
+</form>

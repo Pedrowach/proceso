@@ -1,0 +1,11 @@
+<a href="<%= usersPath %>">Back</a>
+<h2><%= user.name %></h2>
+<h3>User Name: <%= user.username %></h3>
+<h3>Password: <%= user.password %></h3>
+<h3>Email: <%= user.email %></h3>
+<h3>Admin: <%= user.admin %></h3>
+<a href="<%= editUsersPath(user.id) %>">Update user information</a>
+<form action="<%= deleteUsersPath(user.id) %>" method = "POST">
+  <input type="hidden" name = "_method" value = "delete"></input>
+  <input type="submit" value="Delete User">
+</form>

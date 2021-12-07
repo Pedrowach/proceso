@@ -1,0 +1,25 @@
+<a href="/">Back</a>
+<h2>Cursos</h2>
+<table>
+    <thead>
+        <tr>
+          <th>Nombre curso</th>
+          <th>Sigla</th>
+          <th>Promedio minimo</th>
+          <th>Promedio meta</th>
+          <th></th> 
+        </tr>
+    </thead>
+    <tbody>
+        <% cursos.forEach((curso) => { %>
+            <tr>
+               <td><%= curso.nombrecurso %></td>
+               <td><%= curso.sigla %></td> 
+               <td><%= curso.promediomin %></td> 
+               <td><%= curso.promediometa %></td>  
+               <td><a href="<%= showCursosPath(curso.id) %>">View more</a></td> 
+            </tr>
+       <% }) %>
+    </tbody>
+</table>
+<a href="<%= newCursosPath %>">New curso</a>

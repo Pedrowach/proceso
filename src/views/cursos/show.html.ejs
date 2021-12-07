@@ -1,0 +1,11 @@
+<a href="<%= cursosPath %>">Back</a>
+<h2><%= cursos.name %></h2>
+<h3>Nombre Curso: <%= cursos.nombrecurso %></h3>
+<h3>Sigla: <%= cursos.sigla %></h3>
+<h3>Promedio minoimo: <%= cursos.promediomin %></h3>
+<h3>Promedio meta: <%= cursos.promediometa %></h3>
+<a href="<%= editCursosPath(cursos.id) %>">Update cursos information</a>
+<form action="<%= deleteCursosPath(cursos.id) %>" method = "POST">
+  <input type="hidden" name = "_method" value = "delete"></input>
+  <input type="submit" value="Delete Curso">
+</form>
